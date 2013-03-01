@@ -20,6 +20,9 @@
 		C5D4F14E16E10A6C0084115A /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = C5D4F14D16E10A6C0084115A /* Icon.icns */; };
 		C5D4F15216E113880084115A /* NSImage+MGCropExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D4F15016E1122F0084115A /* NSImage+MGCropExtensions.m */; };
 		C5D4F15416E117E20084115A /* shutter.wav in Resources */ = {isa = PBXBuildFile; fileRef = C5D4F15316E117E20084115A /* shutter.wav */; };
+		C5D4F15716E125970084115A /* camera-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C5D4F15516E125970084115A /* camera-icon.png */; };
+		C5D4F15816E125970084115A /* camera-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5D4F15616E125970084115A /* camera-icon@2x.png */; };
+		C5D4F15B16E126B90084115A /* DragStatusView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D4F15A16E126B90084115A /* DragStatusView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +59,10 @@
 		C5D4F14F16E1122F0084115A /* NSImage+MGCropExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage+MGCropExtensions.h"; sourceTree = "<group>"; };
 		C5D4F15016E1122F0084115A /* NSImage+MGCropExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImage+MGCropExtensions.m"; sourceTree = "<group>"; };
 		C5D4F15316E117E20084115A /* shutter.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = shutter.wav; sourceTree = "<group>"; };
+		C5D4F15516E125970084115A /* camera-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera-icon.png"; sourceTree = "<group>"; };
+		C5D4F15616E125970084115A /* camera-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera-icon@2x.png"; sourceTree = "<group>"; };
+		C5D4F15916E126B90084115A /* DragStatusView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DragStatusView.h; sourceTree = "<group>"; };
+		C5D4F15A16E126B90084115A /* DragStatusView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DragStatusView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +91,8 @@
 			children = (
 				C5D4F14D16E10A6C0084115A /* Icon.icns */,
 				C5D4F15316E117E20084115A /* shutter.wav */,
+				C5D4F15516E125970084115A /* camera-icon.png */,
+				C5D4F15616E125970084115A /* camera-icon@2x.png */,
 				C5D4F11C16E109D70084115A /* Snap */,
 				C5D4F13916E109D80084115A /* SnapTests */,
 				C5D4F11516E109D70084115A /* Frameworks */,
@@ -129,6 +138,8 @@
 				C5D4F12916E109D70084115A /* AppDelegate.m */,
 				C5D4F12B16E109D80084115A /* MainMenu.xib */,
 				C5D4F11D16E109D70084115A /* Supporting Files */,
+				C5D4F15916E126B90084115A /* DragStatusView.h */,
+				C5D4F15A16E126B90084115A /* DragStatusView.m */,
 			);
 			path = Snap;
 			sourceTree = "<group>";
@@ -240,6 +251,8 @@
 				C5D4F12D16E109D80084115A /* MainMenu.xib in Resources */,
 				C5D4F14E16E10A6C0084115A /* Icon.icns in Resources */,
 				C5D4F15416E117E20084115A /* shutter.wav in Resources */,
+				C5D4F15716E125970084115A /* camera-icon.png in Resources */,
+				C5D4F15816E125970084115A /* camera-icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +290,7 @@
 				C5D4F12316E109D70084115A /* main.m in Sources */,
 				C5D4F12A16E109D70084115A /* AppDelegate.m in Sources */,
 				C5D4F15216E113880084115A /* NSImage+MGCropExtensions.m in Sources */,
+				C5D4F15B16E126B90084115A /* DragStatusView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

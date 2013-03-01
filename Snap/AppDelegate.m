@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "NSImage+MGCropExtensions.h"
+#import "DragStatusView.h"
+
 
 @implementation AppDelegate
 
@@ -15,6 +17,22 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     // Insert code here to initialize your application
+    
+    self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSSquareStatusItemLength];
+    
+    DragStatusView* dragView = [[DragStatusView alloc] initWithFrame:NSMakeRect(0, 0, 24, 24)];
+    [dragView setDelegate: self];
+
+    NSImageView *bg = [[NSImageView alloc] initWithFrame: dragView.bounds];
+    [bg setImage: [NSImage imageNamed: @"camera-icon"]];
+    [bg addSubview: dragView];
+    [dragView release];
+    
+    [self.statusItem setMenu: self.statusMenu];
+    [self.statusItem setView:bg];
+    [bg release];
+
+    
 }
 
 -(void)unretinaFile: (NSString*)fileName to: (NSString*)outputFilename{
@@ -46,9 +64,8 @@
     
 }
 
--(void)application:(NSApplication *)sender openFiles:(NSArray *)fileNames {
-    
-    
+-(void)processFiles: (NSArray*)fileNames{
+    int count = 0;
     NSMutableArray *outputs = [[NSMutableArray alloc] init];
     for(NSString *fileName in fileNames)
     {
@@ -59,20 +76,38 @@
         
         [outputs addObject: [NSURL fileURLWithPath: fileName]];
         [outputs addObject: [NSURL fileURLWithPath: outputFileName]];
+        count += 1;
     }
-
+    
     // [[NSWorkspace sharedWorkspace] activateFileViewerSelectingURLs: outputs];
     [outputs release];
     
-    if(!self.shutterSound){
-        NSSound *sound = [[NSSound alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"shutter" ofType:@"wav"] byReference:NO];
-        [self setShutterSound: sound];
-        [sound release];
+    if(count > 0){
+        if(!self.shutterSound){
+            NSSound *sound = [[NSSound alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"shutter" ofType:@"wav"] byReference:NO];
+            [self setShutterSound: sound];
+            [sound release];
+        }
+        [self.shutterSound play];
+    
     }
-    [self.shutterSound play];
+
+}
+-(void)application:(NSApplication *)sender openFiles:(NSArray *)fileNames {
+    
+    [self processFiles:fileNames];
 }
 
+#pragma mark DragStatusViewDelegate
+-(void)dragStatusView:(id)sender didDragOperations:(NSArray *)fileNames {
+    [self processFiles:fileNames];
+
+}
+#pragma mark -
+#pragma mark Memory
 -(void)dealloc {
+    self.statusItem = nil;
+    self.statusMenu = nil;
     self.shutterSound = nil;
     [super dealloc];
 }

@@ -7,10 +7,13 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "DragStatusView.h"
 
-@interface AppDelegate : NSObject <NSApplicationDelegate>
+@interface AppDelegate : NSObject <NSApplicationDelegate, DragStatusViewDelegate>
 
 @property (nonatomic, retain) NSSound *shutterSound;
+@property (nonatomic, retain) IBOutlet NSStatusItem *statusItem;
+@property (nonatomic, retain) IBOutlet NSMenu *statusMenu;
 @property (assign) IBOutlet NSWindow *window;
 
 @end
