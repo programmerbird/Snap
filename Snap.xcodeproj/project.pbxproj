@@ -17,6 +17,9 @@
 		C5D4F13616E109D80084115A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5D4F11616E109D70084115A /* Cocoa.framework */; };
 		C5D4F13E16E109D80084115A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C5D4F13C16E109D80084115A /* InfoPlist.strings */; };
 		C5D4F14116E109D80084115A /* SnapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D4F14016E109D80084115A /* SnapTests.m */; };
+		C5D4F14E16E10A6C0084115A /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = C5D4F14D16E10A6C0084115A /* Icon.icns */; };
+		C5D4F15216E113880084115A /* NSImage+MGCropExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D4F15016E1122F0084115A /* NSImage+MGCropExtensions.m */; };
+		C5D4F15416E117E20084115A /* shutter.wav in Resources */ = {isa = PBXBuildFile; fileRef = C5D4F15316E117E20084115A /* shutter.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,10 @@
 		C5D4F13D16E109D80084115A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C5D4F13F16E109D80084115A /* SnapTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SnapTests.h; sourceTree = "<group>"; };
 		C5D4F14016E109D80084115A /* SnapTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SnapTests.m; sourceTree = "<group>"; };
+		C5D4F14D16E10A6C0084115A /* Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Icon.icns; sourceTree = "<group>"; };
+		C5D4F14F16E1122F0084115A /* NSImage+MGCropExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage+MGCropExtensions.h"; sourceTree = "<group>"; };
+		C5D4F15016E1122F0084115A /* NSImage+MGCropExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImage+MGCropExtensions.m"; sourceTree = "<group>"; };
+		C5D4F15316E117E20084115A /* shutter.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = shutter.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +82,8 @@
 		C5D4F10A16E109D70084115A = {
 			isa = PBXGroup;
 			children = (
+				C5D4F14D16E10A6C0084115A /* Icon.icns */,
+				C5D4F15316E117E20084115A /* shutter.wav */,
 				C5D4F11C16E109D70084115A /* Snap */,
 				C5D4F13916E109D80084115A /* SnapTests */,
 				C5D4F11516E109D70084115A /* Frameworks */,
@@ -114,6 +123,8 @@
 		C5D4F11C16E109D70084115A /* Snap */ = {
 			isa = PBXGroup;
 			children = (
+				C5D4F14F16E1122F0084115A /* NSImage+MGCropExtensions.h */,
+				C5D4F15016E1122F0084115A /* NSImage+MGCropExtensions.m */,
 				C5D4F12816E109D70084115A /* AppDelegate.h */,
 				C5D4F12916E109D70084115A /* AppDelegate.m */,
 				C5D4F12B16E109D80084115A /* MainMenu.xib */,
@@ -227,6 +238,8 @@
 				C5D4F12116E109D70084115A /* InfoPlist.strings in Resources */,
 				C5D4F12716E109D70084115A /* Credits.rtf in Resources */,
 				C5D4F12D16E109D80084115A /* MainMenu.xib in Resources */,
+				C5D4F14E16E10A6C0084115A /* Icon.icns in Resources */,
+				C5D4F15416E117E20084115A /* shutter.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +276,7 @@
 			files = (
 				C5D4F12316E109D70084115A /* main.m in Sources */,
 				C5D4F12A16E109D70084115A /* AppDelegate.m in Sources */,
+				C5D4F15216E113880084115A /* NSImage+MGCropExtensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,6 +464,7 @@
 				C5D4F14616E109D80084115A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C5D4F14716E109D80084115A /* Build configuration list for PBXNativeTarget "SnapTests" */ = {
 			isa = XCConfigurationList;
@@ -458,6 +473,7 @@
 				C5D4F14916E109D80084115A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

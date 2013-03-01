@@ -10,6 +10,7 @@
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
+@property (nonatomic, retain) NSSound *shutterSound;
 @property (assign) IBOutlet NSWindow *window;
 
 @end
