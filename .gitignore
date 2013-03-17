@@ -22,4 +22,6 @@ Media/Build
 *.pyc
 
 Media/Debug
+shutter.wav
+Icon.icns
 
