@@ -18,7 +18,7 @@ https://raw.github.com/ssimasanti/Snap/master/Snap.dmg
 
 ## License
 
-Icon and sound have been removed from source code repository, since I cannot redistribute them.
+Icon and sound have been removed from source code repository, since I do not have a license to redistribute them individually.
 Anyway, nice icon bought from http://graphicriver.net/item/stereoscopic-camera-icon/3062840
 and the shutter sound from http://audiojungle.net/item/highquality-camera-autofocus-and-shutter/96807
 
